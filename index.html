@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Noto Sans SC', sans-serif;
-            background-color: #f1f5f9;
+            background-color: #f1f5f9; /* bg-slate-100 */
         }
         .timeline-item::before {
             content: '';
@@ -25,7 +25,10 @@
             display: none;
         }
         .timeline-icon {
-            background-color: #f1f5f9;
+            background-color: #f1f5f9; /* bg-slate-100 */
+        }
+        .sticky-header {
+            background-color: #f1f5f9; /* Ensure solid background for sticky header */
         }
     </style>
 </head>
@@ -40,11 +43,11 @@
 
         <!-- Day 1 -->
         <div class="mb-12">
-            <h2 class="text-2xl font-bold text-sky-600 mb-6 sticky top-0 bg-f1f5f9 py-2 z-10">第一天 (24/7, 星期四): 出发与晚餐</h2>
+            <h2 class="text-2xl font-bold text-sky-600 mb-6 sticky top-0 py-2 z-10 sticky-header">第一天 (24/7, 星期四): 出发与晚餐</h2>
             <div class="relative">
                 <!-- Timeline Item 1: Depart -->
                 <div class="timeline-item pl-14 pb-12 relative">
-                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center timeline-icon border-4 border-f1f5f9">
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center timeline-icon border-4 border-slate-100">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16"><path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M1.5 6a.5.5 0 0 0-.5.5v1.928a.5.5 0 0 0 .434.498l3.866.867a.5.5 0 0 0 .58-.492V6.5a.5.5 0 0 0-.5-.5h-4zm13 0a.5.5 0 0 0-.5.5v1.928a.5.5 0 0 0 .434.498l3.866.867a.5.5 0 0 0 .58-.492V6.5a.5.5 0 0 0-.5-.5h-4zM16 4.5A1.5 1.5 0 0 0 14.5 3h-13A1.5 1.5 0 0 0 0 4.5v5.332c0 .761.492 1.425 1.188 1.651l3.866.867c.411.092.837-.145.942-.552V11h4v.8c0 .407.531.644.942.552l3.866-.867A1.8 1.8 0 0 0 16 9.832V4.5z"/></svg>
                     </div>
                     <div class="pt-1">
@@ -56,7 +59,7 @@
 
                 <!-- Timeline Item 2: Hotel -->
                 <div class="timeline-item pl-14 pb-12 relative">
-                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center timeline-icon border-4 border-f1f5f9">
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center timeline-icon border-4 border-slate-100">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-building-check" viewBox="0 0 16 16"><path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514z"/><path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6.5a.5.5 0 0 1-1 0V1H3v14h3v-2.5a.5.5 0 0 1 .5-.5H8v4H3a1 1 0 0 1-1-1z"/><path d="M4.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/></svg>
                     </div>
                     <div class="pt-1">
@@ -65,6 +68,10 @@
                         <div class="bg-white rounded-lg shadow-md overflow-hidden mt-4">
                             <img src="https://placehold.co/800x400/a3e635/ffffff?text=S%26P+Tampin+Hotel" alt="S&P Tampin Hotel" class="w-full h-48 object-cover">
                             <div class="p-4">
+                                <div class="border-l-4 border-sky-500 pl-3 mb-4">
+                                    <h4 class="font-semibold text-slate-800">必做推荐</h4>
+                                    <p class="text-sm text-slate-600">办理入住后，可以稍作休息，为晚上的美食探索养精蓄锐。</p>
+                                </div>
                                 <p id="addr1" class="text-sm text-slate-600">2013, Jln Seremban - Tampin, 73000 Tampin, Negeri Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
                                     <button onclick="copyToClipboard('addr1', this)" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-2 px-3 rounded-lg transition">复制地址</button>
@@ -78,7 +85,7 @@
 
                 <!-- Timeline Item 3: Dinner -->
                 <div class="timeline-item pl-14 pb-12 relative">
-                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center timeline-icon border-4 border-f1f5f9">
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center timeline-icon border-4 border-slate-100">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-egg-fried" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/><path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.27 6.32C.534 7.412.16 8.92.16 10.51c0 3.024 2.29 5.49 5.16 5.49h5.36c2.87 0 5.16-2.466 5.16-5.49 0-1.59-.374-3.1-1.113-4.243a5 5 0 0 0-1.8-1.097"/></svg>
                     </div>
                     <div class="pt-1">
@@ -88,6 +95,10 @@
                         <div class="bg-white rounded-lg shadow-md overflow-hidden mt-4">
                             <img src="https://placehold.co/800x400/f97316/ffffff?text=Lim+Satay+House" alt="猪肉沙爹" class="w-full h-48 object-cover">
                             <div class="p-4">
+                                <div class="border-l-4 border-sky-500 pl-3 mb-4">
+                                    <h4 class="font-semibold text-slate-800">必试推荐</h4>
+                                    <p class="text-sm text-slate-600">招牌猪肉沙爹是必点的，肉质鲜嫩多汁，搭配特制的浓郁花生酱，风味绝佳。</p>
+                                </div>
                                 <p class="text-sm font-semibold text-slate-600">营业时间: 7:00 PM - 10:00 PM (周四至午夜, 周一休息)</p>
                                 <p id="addr2" class="text-sm text-slate-600 mt-2">Taman Indah, 73000 Tampin, Negeri Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
@@ -104,11 +115,11 @@
         
         <!-- Day 2 -->
         <div class="mb-12">
-            <h2 class="text-2xl font-bold text-emerald-600 mb-6 sticky top-0 bg-f1f5f9 py-2 z-10">第二天 (25/7, 星期五): 美食与休闲</h2>
+            <h2 class="text-2xl font-bold text-emerald-600 mb-6 sticky top-0 py-2 z-10 sticky-header">第二天 (25/7, 星期五): 美食与休闲</h2>
             <div class="relative">
                 <!-- Timeline Item 1: Signature -->
                 <div class="timeline-item pl-14 pb-12 relative">
-                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center timeline-icon border-4 border-f1f5f9">
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center timeline-icon border-4 border-slate-100">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16"><path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001"/></svg>
                     </div>
                     <div class="pt-1">
@@ -120,15 +131,19 @@
                 
                 <!-- Timeline Item 2: Lunch -->
                 <div class="timeline-item pl-14 pb-12 relative">
-                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center timeline-icon border-4 border-f1f5f9">
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center timeline-icon border-4 border-slate-100">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-egg-fried" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/><path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.27 6.32C.534 7.412.16 8.92.16 10.51c0 3.024 2.29 5.49 5.16 5.49h5.36c2.87 0 5.16-2.466 5.16-5.49 0-1.59-.374-3.1-1.113-4.243a5 5 0 0 0-1.8-1.097"/></svg>
                     </div>
                     <div class="pt-1">
-                        <p class="font-semibold text-slate-800">午餐</p>
-                        <h3 class="text-xl font-bold text-slate-900">Tampin Rojak</h3>
+                        <p class="font-semibold text-slate-800">下午 12:30 PM</p>
+                        <h3 class="text-xl font-bold text-slate-900">午餐: Tampin Rojak</h3>
                         <div class="bg-white rounded-lg shadow-md overflow-hidden mt-4">
                             <img src="https://placehold.co/800x400/34d399/ffffff?text=Tampin+Rojak" alt="Tampin Rojak" class="w-full h-48 object-cover">
                             <div class="p-4">
+                                <div class="border-l-4 border-emerald-500 pl-3 mb-4">
+                                    <h4 class="font-semibold text-slate-800">必试推荐</h4>
+                                    <p class="text-sm text-slate-600">他们的Rojak酱料独特，混合了水果和蔬菜，口感清爽开胃，是午餐的绝佳选择。</p>
+                                </div>
                                 <p class="text-sm font-semibold text-slate-600">营业时间: 8:30 AM - 6:00 PM (周三休息)</p>
                                 <p id="addr3" class="text-sm text-slate-600 mt-2">2608, Taman Indah Baru, 73000 Tampin, Negeri Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
@@ -143,16 +158,20 @@
 
                 <!-- Timeline Item 3: Tea Time -->
                 <div class="timeline-item pl-14 pb-12 relative">
-                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center timeline-icon border-4 border-f1f5f9">
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center timeline-icon border-4 border-slate-100">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cup-hot-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l1.652-7.434A.5.5 0 0 0 13.5 6zM13 5.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 2 5.5V3h11z"/><path d="M1.5 2a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5"/></svg>
                     </div>
                     <div class="pt-1">
-                        <p class="font-semibold text-slate-800">下午茶</p>
-                        <h3 class="text-xl font-bold text-slate-900">来来香小食館 (Restaurant Lye Xiang)</h3>
+                        <p class="font-semibold text-slate-800">下午 3:00 PM</p>
+                        <h3 class="text-xl font-bold text-slate-900">下午茶: 来来香小食館 (Restaurant Lye Xiang)</h3>
                         <p class="text-sm text-slate-500 mt-1">从 Tampin Rojak 出发约 5-10分钟。</p>
                         <div class="bg-white rounded-lg shadow-md overflow-hidden mt-4">
                             <img src="https://placehold.co/800x400/6ee7b7/ffffff?text=Restaurant+Lye+Xiang" alt="来来香小食館" class="w-full h-48 object-cover">
                             <div class="p-4">
+                                <div class="border-l-4 border-emerald-500 pl-3 mb-4">
+                                    <h4 class="font-semibold text-slate-800">必试推荐</h4>
+                                    <p class="text-sm text-slate-600">可以尝试他们的咖喱面或云吞面，是当地人喜爱的下午茶点心。</p>
+                                </div>
                                 <p class="text-sm font-semibold text-slate-600">营业时间: 1:00 PM - 10:30 PM (周一休息)</p>
                                 <p id="addr4" class="text-sm text-slate-600 mt-2">24, Rumah Kedai, Taman Woon, 73000 Tampin, Negeri Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
@@ -167,16 +186,20 @@
 
                 <!-- Timeline Item 4: Evening -->
                 <div class="timeline-item pl-14 pb-12 relative">
-                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center timeline-icon border-4 border-f1f5f9">
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center timeline-icon border-4 border-slate-100">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-egg-fried" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/><path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.27 6.32C.534 7.412.16 8.92.16 10.51c0 3.024 2.29 5.49 5.16 5.49h5.36c2.87 0 5.16-2.466 5.16-5.49 0-1.59-.374-3.1-1.113-4.243a5 5 0 0 0-1.8-1.097"/></svg>
                     </div>
                     <div class="pt-1">
-                        <p class="font-semibold text-slate-800">傍晚</p>
-                        <h3 class="text-xl font-bold text-slate-900">手工鱼仔面 (Ah Teng Fish Ball Mee)</h3>
+                        <p class="font-semibold text-slate-800">晚上 6:30 PM</p>
+                        <h3 class="text-xl font-bold text-slate-900">晚餐: 手工鱼仔面 (Ah Teng Fish Ball Mee)</h3>
                         <p class="text-sm text-slate-500 mt-1">从上一站出发约 10分钟。</p>
                         <div class="bg-white rounded-lg shadow-md overflow-hidden mt-4">
                             <img src="https://placehold.co/800x400/a7f3d0/ffffff?text=Ah+Teng+Fish+Ball+Mee" alt="手工鱼仔面" class="w-full h-48 object-cover">
                             <div class="p-4">
+                                <div class="border-l-4 border-emerald-500 pl-3 mb-4">
+                                    <h4 class="font-semibold text-slate-800">必试推荐</h4>
+                                    <p class="text-sm text-slate-600">招牌“鱼仔面”是纯手工制作，口感Q弹，搭配清甜的汤头和新鲜的鱼丸，非常美味。</p>
+                                </div>
                                 <p class="text-sm font-semibold text-slate-600">营业时间: 3:30 PM - 10:00 PM (周一、二休息)</p>
                                 <p id="addr5" class="text-sm text-slate-600 mt-2">Tampin Lake Garden Food Court, 73000 Tampin, N. Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
@@ -193,11 +216,11 @@
 
         <!-- Day 3 -->
         <div class="mb-12">
-            <h2 class="text-2xl font-bold text-amber-600 mb-6 sticky top-0 bg-f1f5f9 py-2 z-10">第三天 (26/7, 星期六): 早餐、乐园与返程</h2>
+            <h2 class="text-2xl font-bold text-amber-600 mb-6 sticky top-0 py-2 z-10 sticky-header">第三天 (26/7, 星期六): 早餐、乐园与返程</h2>
             <div class="relative">
                 <!-- Timeline Item 1: Breakfast -->
                 <div class="timeline-item pl-14 pb-12 relative">
-                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center timeline-icon border-4 border-f1f5f9">
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center timeline-icon border-4 border-slate-100">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-egg-fried" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/><path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.27 6.32C.534 7.412.16 8.92.16 10.51c0 3.024 2.29 5.49 5.16 5.49h5.36c2.87 0 5.16-2.466 5.16-5.49 0-1.59-.374-3.1-1.113-4.243a5 5 0 0 0-1.8-1.097"/></svg>
                     </div>
                     <div class="pt-1">
@@ -206,6 +229,10 @@
                         <div class="bg-white rounded-lg shadow-md overflow-hidden mt-4">
                             <img src="https://placehold.co/800x400/fbbf24/ffffff?text=Sin+Hiap+Chang+Pau" alt="新协昌包点" class="w-full h-48 object-cover">
                             <div class="p-4">
+                                <div class="border-l-4 border-amber-500 pl-3 mb-4">
+                                    <h4 class="font-semibold text-slate-800">必试推荐</h4>
+                                    <p class="text-sm text-slate-600">一定要尝尝他们家手工制作的各种“包点”，尤其是叉烧包和加央包，是开启一天的完美早餐。</p>
+                                </div>
                                 <p class="text-sm font-semibold text-slate-600">营业时间: 6:00 AM - 5:00 PM (周一、二休息)</p>
                                 <p id="addr6" class="text-sm text-slate-600 mt-2">PT.2, Jalan Besar, 71350 Kota, Negeri Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
@@ -218,23 +245,39 @@
                     </div>
                 </div>
 
-                <!-- Timeline Item 2: A'Famosa -->
+                <!-- Timeline Item 2: Checkout -->
                 <div class="timeline-item pl-14 pb-12 relative">
-                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center timeline-icon border-4 border-f1f5f9">
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center timeline-icon border-4 border-slate-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2.5a.5.5 0 0 0 1 0v-2.5a1.5 1.5 0 0 0-1.5-1.5h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2.5a.5.5 0 0 0-1 0z"/><path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/></svg>
+                    </div>
+                    <div class="pt-1">
+                        <p class="font-semibold text-slate-800">上午 10:30 AM</p>
+                        <h3 class="text-xl font-bold text-slate-900">酒店退房</h3>
+                        <p class="text-sm text-slate-500 mt-1">从 S&P Tampin Hotel 退房，然后准备前往下一个目的地。</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3: A'Famosa -->
+                <div class="timeline-item pl-14 pb-12 relative">
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center timeline-icon border-4 border-slate-100">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16"><path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/><path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a1 1 0 0 0 .894 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L8.152 7.23a.5.5 0 0 0-.304 0L.152 9.435a.25.25 0 0 0-.152.23zM8 10.933l-6-3V9.43l6 3l6-3v-1.503l-6 3z"/></svg>
                     </div>
                     <div class="pt-1">
-                        <p class="font-semibold text-slate-800">上午 10:00 AM - 下午 3:30 PM</p>
+                        <p class="font-semibold text-slate-800">上午 11:00 AM - 下午 3:30 PM</p>
                         <h3 class="text-xl font-bold text-slate-900">家庭欢乐时光: A'Famosa Resort</h3>
-                        <p class="text-sm text-slate-500 mt-1">从早餐店出发约 15-20分钟。</p>
+                        <p class="text-sm text-slate-500 mt-1">从酒店出发约 15-20分钟。</p>
                         <div class="bg-white rounded-lg shadow-md overflow-hidden mt-4">
                             <img src="https://placehold.co/800x400/fcd34d/ffffff?text=A'Famosa+Resort" alt="A'Famosa Resort" class="w-full h-48 object-cover">
                             <div class="p-4">
+                                <div class="border-l-4 border-amber-500 pl-3 mb-4">
+                                    <h4 class="font-semibold text-slate-800">必玩推荐</h4>
+                                    <p class="text-sm text-slate-600">**Safari Wonderland:** 乘坐游览车进入野生动物区，观看大象和飞禽表演。<br>**Water Park:** 如果喜欢刺激，可以挑战大喇叭滑梯；家庭游客则可以在漂流河享受悠闲时光。</p>
+                                </div>
                                 <p class="text-sm font-semibold text-slate-600">Safari Wonderland: 10AM-5PM | Water Park: 11AM-7PM (周二休息)</p>
                                 <p id="addr7" class="text-sm text-slate-600 mt-2">Jalan Kemus, Simpang Empat, 78000 Alor Gajah, Melaka</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
                                     <button onclick="copyToClipboard('addr7', this)" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-2 px-3 rounded-lg transition">复制地址</button>
-                                    <a href="https://www.google.com/maps/dir/Restoran+Sin+Hiap+Chang+PAU+Kampung,+Kota/A'Famosa+Resort" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
+                                    <a href="https://www.google.com/maps/dir/S%26P+hotel,+Tampin/A'Famosa+Resort" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
                                     <a href="https://www.waze.com/ul?q=A'Famosa%20Resort" target="_blank" class="text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-3 rounded-lg transition">Waze</a>
                                 </div>
                             </div>
@@ -242,9 +285,9 @@
                     </div>
                 </div>
 
-                <!-- Timeline Item 3: Return -->
+                <!-- Timeline Item 4: Return -->
                 <div class="timeline-item pl-14 pb-12 relative">
-                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center timeline-icon border-4 border-f1f5f9">
+                    <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center timeline-icon border-4 border-slate-100">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house-heart-fill" viewBox="0 0 16 16"><path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708z"/><path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5zm-6.001 2.924a.512.512 0 0 1-.707 0l-.547-.547a.5.5 0 1 1 .707-.708l.175.176.176-.175a.5.5 0 1 1 .708.707z"/></svg>
                     </div>
                     <div class="pt-1">
