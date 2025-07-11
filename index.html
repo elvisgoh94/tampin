@@ -30,6 +30,7 @@
         .sticky-header {
             background-color: #f1f5f9; /* Ensure solid background for sticky header */
             transition: all 0.3s ease-in-out;
+            border-radius: 0.5rem; /* Added border-radius */
         }
     </style>
 </head>
@@ -44,7 +45,7 @@
 
         <!-- Day 1 -->
         <div class="mb-12">
-            <h2 class="text-2xl font-bold text-sky-600 mb-6 sticky top-0 py-4 px-4 z-10 sticky-header shadow-lg border-b border-slate-200">第一天 (24/7, 星期四): 出发与晚餐</h2>
+            <h2 class="text-2xl font-bold text-sky-600 mb-6 sticky top-0 py-4 px-4 z-10 sticky-header shadow-lg border-b border-slate-200">第一天 (24/7, 星期四): 抵达与晚餐</h2>
             <div class="relative">
                 <!-- Timeline Item 1: Depart -->
                 <div class="timeline-item pl-14 pb-12 relative">
@@ -75,9 +76,9 @@
                                 </div>
                                 <p id="addr1" class="text-sm text-slate-600">2013, Jln Seremban - Tampin, 73000 Tampin, Negeri Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <button onclick="copyToClipboard('addr1', this)" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-2 px-3 rounded-lg transition">复制地址</button>
-                                    <a href="https://www.google.com/maps/dir/?api=1&destination=S%26P+hotel,+2013,+Jln+Seremban+-+Tampin,+73000+Tampin,+Negeri+Sembilan" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=S%26P+Tampin+Hotel" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
                                     <a href="https://www.waze.com/ul?q=S%26P%20Tampin%20Hotel" target="_blank" class="text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-3 rounded-lg transition">Waze</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=S%26P%20Tampin%20Hotel" target="_blank" class="text-xs bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google 商家</a>
                                 </div>
                             </div>
                         </div>
@@ -90,22 +91,22 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-egg-fried" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/><path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.27 6.32C.534 7.412.16 8.92.16 10.51c0 3.024 2.29 5.49 5.16 5.49h5.36c2.87 0 5.16-2.466 5.16-5.49 0-1.59-.374-3.1-1.113-4.243a5 5 0 0 0-1.8-1.097"/></svg>
                     </div>
                     <div class="pt-1">
-                        <p class="font-semibold text-slate-800">晚上 6:50 PM</p>
-                        <h3 class="text-xl font-bold text-slate-900">晚餐: 猪肉沙爹 (Lim Satay House)</h3>
-                        <p class="text-sm text-slate-500 mt-1">从酒店出发约 5-10分钟。</p>
+                        <p class="font-semibold text-slate-800">晚上 7:00 PM</p>
+                        <h3 class="text-xl font-bold text-slate-900">晚餐: Restoran Zol Sate</h3>
+                        <p class="text-sm text-slate-500 mt-1">从酒店出发约 10 分钟车程。</p>
                         <div class="bg-white rounded-lg shadow-md overflow-hidden mt-4">
-                            <img src="https://placehold.co/800x400/f97316/ffffff?text=Lim+Satay+House" alt="猪肉沙爹" class="w-full h-48 object-cover">
+                            <img src="https://placehold.co/800x400/f59e0b/ffffff?text=Zol+Sate" alt="Zol Sate" class="w-full h-48 object-cover">
                             <div class="p-4">
                                 <div class="border-l-4 border-sky-500 pl-3 mb-4">
                                     <h4 class="font-semibold text-slate-800">必试推荐</h4>
-                                    <p class="text-sm text-slate-600">招牌猪肉沙爹是必点的，肉质鲜嫩多汁，搭配特制的浓郁花生酱，风味绝佳。</p>
+                                    <p class="text-sm text-slate-600">这里的沙爹以肉质饱满和秘制酱料闻名。除了常见的鸡肉和牛肉沙爹，他们的羊肉沙爹也非常受欢迎。</p>
                                 </div>
-                                <p class="text-sm font-semibold text-slate-600">营业时间: 7:00 PM - 10:00 PM (周四至午夜, 周一休息)</p>
-                                <p id="addr2" class="text-sm text-slate-600 mt-2">Taman Indah, 73000 Tampin, Negeri Sembilan</p>
+                                <p class="text-sm font-semibold text-slate-600">营业时间: 5:00 PM - 12:00 AM (大约时间, 建议查看Google)</p>
+                                <p id="addr_zol" class="text-sm text-slate-600 mt-2">Jalan Besar, 73000 Tampin, Negeri Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <button onclick="copyToClipboard('addr2', this)" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-2 px-3 rounded-lg transition">复制地址</button>
-                                    <a href="https://www.google.com/maps/dir/S%26P+hotel,+Tampin/Lim+Satay+House,+Taman+Indah,+Tampin" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
-                                    <a href="https://www.waze.com/ul?q=Lim%20Satay%20House%20Tampin" target="_blank" class="text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-3 rounded-lg transition">Waze</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Restoran+Zol+Sate+Tampin" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
+                                    <a href="https://www.waze.com/ul?q=Restoran%20Zol%20Sate%20Tampin" target="_blank" class="text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-3 rounded-lg transition">Waze</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Restoran+Zol+Sate+Tampin" target="_blank" class="text-xs bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google 商家</a>
                                 </div>
                             </div>
                         </div>
@@ -148,9 +149,9 @@
                                 <p class="text-sm font-semibold text-slate-600">营业时间: 8:30 AM - 6:00 PM (周三休息)</p>
                                 <p id="addr3" class="text-sm text-slate-600 mt-2">2608, Taman Indah Baru, 73000 Tampin, Negeri Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <button onclick="copyToClipboard('addr3', this)" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-2 px-3 rounded-lg transition">复制地址</button>
-                                    <a href="https://www.google.com/maps/dir/S%26P+hotel,+Tampin/Tampin+Rojak" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Tampin+Rojak" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
                                     <a href="https://www.waze.com/ul?q=Tampin%20Rojak" target="_blank" class="text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-3 rounded-lg transition">Waze</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Tampin+Rojak" target="_blank" class="text-xs bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google 商家</a>
                                 </div>
                             </div>
                         </div>
@@ -176,9 +177,9 @@
                                 <p class="text-sm font-semibold text-slate-600">营业时间: 1:00 PM - 10:30 PM (周一休息)</p>
                                 <p id="addr4" class="text-sm text-slate-600 mt-2">24, Rumah Kedai, Taman Woon, 73000 Tampin, Negeri Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <button onclick="copyToClipboard('addr4', this)" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-2 px-3 rounded-lg transition">复制地址</button>
-                                    <a href="https://www.google.com/maps/dir/Tampin+Rojak/Restaurant+Lye+Xiang,+Tampin" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Restaurant+Lye+Xiang+Tampin" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
                                     <a href="https://www.waze.com/ul?q=Restaurant%20Lye%20Xiang%20Tampin" target="_blank" class="text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-3 rounded-lg transition">Waze</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Restaurant+Lye+Xiang+Tampin" target="_blank" class="text-xs bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google 商家</a>
                                 </div>
                             </div>
                         </div>
@@ -204,9 +205,9 @@
                                 <p class="text-sm font-semibold text-slate-600">营业时间: 3:30 PM - 10:00 PM (周一、二休息)</p>
                                 <p id="addr5" class="text-sm text-slate-600 mt-2">Tampin Lake Garden Food Court, 73000 Tampin, N. Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <button onclick="copyToClipboard('addr5', this)" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-2 px-3 rounded-lg transition">复制地址</button>
-                                    <a href="https://www.google.com/maps/dir/Restaurant+Lye+Xiang,+Tampin/Tampin+Lake+Garden+Food+Court" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Ah+Teng+Fish+Ball+Mee+Tampin" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
                                     <a href="https://www.waze.com/ul?q=Tampin%20Lake%20Garden%20Food%20Court" target="_blank" class="text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-3 rounded-lg transition">Waze</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Ah+Teng+Fish+Ball+Mee+Tampin" target="_blank" class="text-xs bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google 商家</a>
                                 </div>
                             </div>
                         </div>
@@ -237,9 +238,9 @@
                                 <p class="text-sm font-semibold text-slate-600">营业时间: 6:00 AM - 5:00 PM (周一、二休息)</p>
                                 <p id="addr6" class="text-sm text-slate-600 mt-2">PT.2, Jalan Besar, 71350 Kota, Negeri Sembilan</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <button onclick="copyToClipboard('addr6', this)" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-2 px-3 rounded-lg transition">复制地址</button>
-                                    <a href="https://www.google.com/maps/dir/S%26P+hotel,+Tampin/Restoran+Sin+Hiap+Chang+PAU+Kampung,+Kota" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Restoran+Sin+Hiap+Chang+PAU+Kampung" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
                                     <a href="https://www.waze.com/ul?q=Restoran%20Sin%20Hiap%20Chang%20PAU%20Kampung" target="_blank" class="text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-3 rounded-lg transition">Waze</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Restoran+Sin+Hiap+Chang+PAU+Kampung" target="_blank" class="text-xs bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google 商家</a>
                                 </div>
                             </div>
                         </div>
@@ -277,9 +278,9 @@
                                 <p class="text-sm font-semibold text-slate-600">Safari Wonderland: 10AM-5PM | Water Park: 11AM-7PM (周二休息)</p>
                                 <p id="addr7" class="text-sm text-slate-600 mt-2">Jalan Kemus, Simpang Empat, 78000 Alor Gajah, Melaka</p>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <button onclick="copyToClipboard('addr7', this)" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-2 px-3 rounded-lg transition">复制地址</button>
-                                    <a href="https://www.google.com/maps/dir/S%26P+hotel,+Tampin/A'Famosa+Resort" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=A'Famosa+Resort" target="_blank" class="text-xs bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google Maps</a>
                                     <a href="https://www.waze.com/ul?q=A'Famosa%20Resort" target="_blank" class="text-xs bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-3 rounded-lg transition">Waze</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=A'Famosa+Resort" target="_blank" class="text-xs bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-3 rounded-lg transition">Google 商家</a>
                                 </div>
                             </div>
                         </div>
@@ -303,50 +304,7 @@
     </div>
 
     <script>
-        // 使用 document.execCommand('copy') 以获得更好的兼容性
-        function copyToClipboard(elementId, button) {
-            const textToCopy = document.getElementById(elementId).innerText;
-            
-            // 创建一个临时的 textarea 元素
-            const textArea = document.createElement('textarea');
-            textArea.value = textToCopy;
-            
-            // 避免在屏幕上闪烁
-            textArea.style.position = 'fixed';
-            textArea.style.top = '0';
-            textArea.style.left = '0';
-            textArea.style.width = '2em';
-            textArea.style.height = '2em';
-            textArea.style.padding = '0';
-            textArea.style.border = 'none';
-            textArea.style.outline = 'none';
-            textArea.style.boxShadow = 'none';
-            textArea.style.background = 'transparent';
-
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-
-            try {
-                const successful = document.execCommand('copy');
-                if (successful) {
-                    const originalText = button.innerText;
-                    button.innerText = '已复制!';
-                    button.classList.add('bg-green-500', 'text-white');
-                    setTimeout(() => {
-                        button.innerText = originalText;
-                        button.classList.remove('bg-green-500', 'text-white');
-                    }, 2000);
-                } else {
-                     alert('复制失败，请手动复制。');
-                }
-            } catch (err) {
-                console.error('无法复制地址: ', err);
-                alert('复制失败，请手动复制。');
-            }
-
-            document.body.removeChild(textArea);
-        }
+        // This script is intentionally left blank as the copy function was removed.
     </script>
 </body>
 </html>
